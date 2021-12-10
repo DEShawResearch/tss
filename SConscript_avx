@@ -1,0 +1,9 @@
+Import('env_avx', 'tss_sources', 'version')
+import os
+
+env_avx.Append(LINKFLAGS=['-Wl,--default-symver'])
+tss_library = env_avx.AddLibrary('tss_avx', tss_sources, SHLIBVERSION=version)
+Export('tss_library')
+
+env_avx.AddProgram('gaussians', ['src/run_gaussians.cxx'],
+                   LIBS=[tss_library, 'msys', 'ark'])

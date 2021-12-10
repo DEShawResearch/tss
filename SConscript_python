@@ -1,0 +1,14 @@
+Import('env_avx', 'tss_library')
+
+ext = env_avx.AddPythonExtension('_tss', ['src/pybind.cpp'], prefix='', LIBS=[tss_library, 'msys', 'ark'])
+Depends(ext, tss_library)
+pymod = env_avx.AddPythonModule('python/__init__.py',
+                                'python/tss_graph_builder.py',
+                                'python/interpolate.py',
+                                'python/graph_validation.py',
+                                'python/util.py',
+                                'python/tss_context_manager.py',
+                                prefix='tss')
+
+env_avx.AddScript('scripts/build_graph.py')
+env_avx.AddScript('scripts/plot_fe.py')
