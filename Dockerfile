@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 RUN apt-get update
 RUN apt install -y software-properties-common
 RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt install -y build-essential python3.7-dev libeigen3-dev git python3-pip pybind11-dev doxygen libsqlite3-dev libboost1.67-dev libboost-filesystem1.67-dev libboost-iostreams1.67-dev pandoc jupyter
+RUN apt install -y build-essential python3.7-dev libeigen3-dev git python3-pip pybind11-dev doxygen libsqlite3-dev libboost1.67-dev libboost-filesystem1.67-dev libboost-iostreams1.67-dev pandoc jupyter python3.7-distutils
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
 RUN python3.7 -m pip install numpy scipy nbsphinx scons sphinx_argparse sphinx_rtd_theme matplotlib
 RUN python3.7 -m pip install pyzmq --force-reinstall
