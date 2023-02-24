@@ -57,4 +57,4 @@ To launch the SI notebook example, run
 
     docker run --workdir /app/tss -p 8888:8888 -e PYTHONPATH=/tmp/installs/lib/python -it tss-context:v1 jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root
 
-follow the console instructions to connect to the notebook in a browser, and navigate to examples/paper_appendix_numerical_examples/gaussians.ipynb.
+follow the console instructions to connect to the notebook in a browser, and navigate to examples/Section4_numerical_example/gaussians.ipynb.

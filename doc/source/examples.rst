@@ -4,7 +4,7 @@ Examples of how to run TSS
 Running TSS via ipython
 -----------------------
 
-See the notebook below (and at ``examples/paper_appendix_numerical_examples/gaussians.ipynb``) for an example of running TSS via the python interface and a simple model and plotting the results.
+See the notebook below (and at ``examples/Section4_numerical_example/gaussians.ipynb``) for an example of running TSS via the python interface and a simple model and plotting the results.
 
 .. toctree::
 
